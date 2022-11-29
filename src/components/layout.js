@@ -6,8 +6,8 @@
  */
 
 import * as React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
 
 import Header from "./header"
 import "./layout.css"
@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
@@ -26,25 +27,17 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+      <main>{children}</main>
+      <footer className="p-4 lg:ml-[35%] bg-primary-700 text-white">
+        <p>
+          This site is built with the Jamstack. The Jam in Jamstack stands for
+          JavaScript, APIs, and HTML markup. Gatsby JS generates these files
+          during the build process and Netlify provides continuous deployments
+          triggered by Git. This site is blazing fast and secure. Yeah, it's
+          pretty awesome.
+        </p>
+        <a href="#">View Site Performance</a>
+      </footer>
     </>
   )
 }
