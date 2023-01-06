@@ -10,7 +10,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 
 import Header from "./header"
-import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,7 +27,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
-      <footer className="p-4 lg:ml-[35%] bg-primary-700 text-white">
+      <footer className="p-4 lg:ml-[35%] bg-base-50 dark:bg-base-500">
         <p>
           This site is built with the Jamstack. The Jam in Jamstack stands for
           JavaScript, APIs, and HTML markup. Gatsby JS generates these files

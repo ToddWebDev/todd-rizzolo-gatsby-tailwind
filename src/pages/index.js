@@ -4,13 +4,13 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import OverviewSection from "../components/overviewSection"
 
 const IndexPage = () => (
   <div id="top">
     <Layout>
       <div className="p-4 lg:ml-[35%]">
-        <h1>Main Content</h1>
+        <OverviewSection />
         <section>
           <a href="#top">
             <i aria-hidden className="fas fa-angle-double-up"></i> Back to top

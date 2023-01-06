@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors")
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
   content: [
@@ -32,8 +33,27 @@ module.exports = {
       20: "128px",
     },
     extend: {
+      fontFamily: {
+        sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
+        catamaran: ["Catamaran", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
-        primary: colors.sky,
+        primary: colors.rose,
+        base: {
+          "00": "#f5f8fa",
+          50: "#dce5eb",
+          100: "#c4d3dc",
+          300: "#3f7893",
+          500: "#164c69",
+          700: "#13435C",
+          900: "#0d2d3e",
+        },
+      },
+      backgroundImage: {
+        "hero-pattern":
+          "linear-gradient(295deg, rgba(245, 248, 250, 0) 0%, rgba(245, 248, 250, 0.99) 50%, rgba(245, 248, 250, 1) 100%), url('../images/pattern-randomized.svg')",
+        "hero-image":
+          "linear-gradient(180deg,rgba(22,76,105,.9),rgba(13,45,62,.9)), url('../images/ministrygrid-mockup.jpg')",
       },
     },
   },
