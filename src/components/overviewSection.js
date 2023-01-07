@@ -13,36 +13,60 @@ const Overview = () => {
   return (
     <section>
       <h2>Front-End Web Developer</h2>
-      <blockquote className="text-base-900 dark:text-white">
+      <blockquote className="relative text-base-900 dark:text-white p-2 m-0 text-lg">
         {readMore ? descriptionText : descriptionText.slice(0, 311) + "..."}
         <br />
         {!readMore && (
-          <a href="#" onClick={e => handleClick(e)}>
+          <a href="#" onClick={e => handleClick(e)} className="text-lg">
             Read More
           </a>
         )}
       </blockquote>
 
       <h3>Toolbox</h3>
-      <ul className="list-fill">
-        <li>Javascript</li>
-        <li>React</li>
-        <li>AngularJS</li>
-        <li>Webpack</li>
+      <ul className="my-2 list-none flex flex-wrap content-center items-start space-x-2">
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          Javascript
+        </li>
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          React
+        </li>
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          AngularJS
+        </li>
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          Webpack
+        </li>
         <li className="list-fill"></li>
       </ul>
-      <ul>
-        <li>NextJS</li>
-        <li>Gatsby</li>
-        <li>GraphQL</li>
-        <li>Accessibility</li>
+      <ul className="my-2 list-none flex flex-wrap content-center items-start space-x-2">
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          NextJS
+        </li>
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          Gatsby
+        </li>
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          GraphQL
+        </li>
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          Accessibility
+        </li>
         <li className="list-fill"></li>
       </ul>
-      <ul>
-        <li>User Interface Design</li>
-        <li>UX</li>
-        <li>Wireframes</li>
-        <li>Prototyping</li>
+      <ul className="my-2 list-none flex flex-wrap content-center items-start space-x-2">
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          User Interface Design
+        </li>
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          UX
+        </li>
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          Wireframes
+        </li>
+        <li className="px-4 py-2 bg-base-500 rounded border border-base-300">
+          Prototyping
+        </li>
         <li className="list-fill"></li>
       </ul>
     </section>

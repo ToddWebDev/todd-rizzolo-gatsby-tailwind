@@ -9,7 +9,7 @@ import OverviewSection from "../components/overviewSection"
 const IndexPage = () => (
   <div id="top">
     <Layout>
-      <div className="p-4 lg:ml-[35%]">
+      <div className="p-10 lg:ml-[35%] max-w-3xl space-y-14">
         <OverviewSection />
         <section>
           <a href="#top">
